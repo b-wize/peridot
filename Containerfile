@@ -38,7 +38,7 @@ RUN rpm-ostree install \
 # Remove some unwanted stuff
 
 
-RUN cat /tmp/flatpak_install >> /usr/share/ublue-os/bluefin/flatpak/install
+#RUN cat /tmp/flatpak_install >> /usr/share/ublue-os/bluefin/flatpak/install
 
 RUN echo "import \"/tmp/just/bluefin-system.just\"" >> /usr/share/ublue-os/justfile && \
 rm -rf \
