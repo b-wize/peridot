@@ -15,7 +15,7 @@ Reboot to complete the rebase:
 
 Then rebase to the signed image, like so:
 #
-                rpm-ostree rebase ostree-image-signed:docker://ghcr.io/b-wize/$IMAGE_NAME:latest
+                rpm-ostree rebase ostree-image-signed:docker://ghcr.io/b-wize/$peridot:latest
 
 Reboot again to complete the installation
 #
