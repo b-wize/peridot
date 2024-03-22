@@ -1,7 +1,7 @@
 Rebasing
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
-First rebase to the unsigned image, to get the proper signing keys and policies installed:
+First rebase to the unsigned image, to get the proper signing keys and policies installed: ##
     rpm-ostree rebase ostree-unverified-registry:ghcr.io/secureblue/$IMAGE_NAME:latest
 
 Reboot to complete the rebase:
