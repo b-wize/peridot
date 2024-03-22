@@ -33,8 +33,7 @@ RUN rpm-ostree install \
   gamescope \
   mangohud \
   lm_sensors \
-  gnome-extensions-app \
-  google-chrome-stable
+  gnome-extensions-app
 
 # Remove some unwanted stuff
 RUN rpm-ostree override remove \
