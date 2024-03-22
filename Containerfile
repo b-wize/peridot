@@ -36,9 +36,7 @@ RUN rpm-ostree install \
   gnome-extensions-app
 
 # Remove some unwanted stuff
-RUN rpm-ostree override remove \
-  firefox \
-  firefox-langpacks
+
 
 RUN cat /tmp/flatpak_install >> /usr/share/ublue-os/bluefin/flatpak/install
 
