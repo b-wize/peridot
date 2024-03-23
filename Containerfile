@@ -12,8 +12,8 @@ COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
 RUN rpm-ostree install \
   gamescope \
   mangohud \
-  lm_sensors \
-  google-chrome-stable
+  lm_sensors 
+  #google-chrome-stable
 
 # Remove some unwanted stuff
 RUN rpm-ostree override remove \
