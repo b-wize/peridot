@@ -1,5 +1,11 @@
 ![peridot](https://github.com/b-wize/peridot/actions/workflows/build.yml/badge.svg)
 
+
+![image](https://github.com/b-wize/peridot/assets/29105401/8233800a-b9bb-4d98-882c-c707cd2febd2)
+
+
+
+
 A customized OCI Fedora silverblue with some preferred tweaks. 
 
 Big thanks to everyone working on the [Universal Blue](https://github.com/ublue-os) and [Bazzite](https://github.com/ublue-os/bazzite) projects.
