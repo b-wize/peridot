@@ -1,7 +1,10 @@
-ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME:-main}"
-ARG IMAGE_TAG="$}{MAGE_TAG:-latest}"
+ARG BASE_IMAGE_NAME="${BASE_IMAGE_NAME:-silverblue}"
+ARG IMAGE_FLAVOR="${IMAGE_FLAVOR:-main}"
+ARG SOURCE_IMAGE="${SOURCE_IMAGE:-$BASE_IMAGE_NAME-$IMAGE_FLAVOR}"
+ARG IMAGE_TAG="${MAGE_TAG:-latest}"
+ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION:-39}"
 
-FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${IMAGE_TAG} AS peridot
+FROM ghcr.io/ublue-os/${SOURCE_IMAGE}:${FEDORA_MAJOR_VERSION} AS peridot
 
 COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
 
@@ -33,6 +36,7 @@ RUN rpm-ostree install \
   mangohud \
   lm_sensors \
   solaar \ 
+  solaar-udev \
   hplip \
   google-chrome-stable
 
