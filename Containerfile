@@ -21,6 +21,7 @@ RUN rpm-ostree override remove \
   cockpit-bridge \
   epson-inkjet-printer-escpr \
   epson-inkjet-printer-escpr2 \
+  gcc \
   glow \
   gnome-shell-extension-blur-my-shell \
   gnome-shell-extension-dash-to-dock \
@@ -32,11 +33,14 @@ RUN rpm-ostree override remove \
   libgda \
   libimobiledevice \
   make \
+  nautilus-gsconnect \
   playerctl \
+  playerctl-libs \
   rclone \
   restic \
   stress-ng \
-  tailscale
+  tailscale \
+  usbmuxd
 
 # Settings and service tweaks
 RUN systemctl disable tailscaled.service
