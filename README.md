@@ -22,3 +22,5 @@ Then rebase to the signed image, like so:
 Reboot again to complete the installation
 #
     systemctl reboot
+
+Again, this project would not be possible without all the hard work contributed to the Universal Blue (Ublue) and Bazzite projects.
