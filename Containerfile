@@ -26,6 +26,7 @@ RUN rpm-ostree override remove \
   gnome-shell-extension-dash-to-dock \
   gnome-shell-extension-logo-menu \
   ifuse \
+  input-leap \
   input-remapper \
   libgda-sqlite \
   libgda \
