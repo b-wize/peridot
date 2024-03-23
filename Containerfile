@@ -36,8 +36,7 @@ RUN rpm-ostree override remove \
 
 # Settings and service tweaks
 
-
-rm -rf \
-/tmp/* \
-/var/* && \
-ostree container commit
+RUN rm -rf \
+  /tmp/* \
+  /var/* && \
+  ostree container commit
