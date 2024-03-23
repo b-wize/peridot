@@ -35,7 +35,7 @@ RUN rpm-ostree override remove \
   tailscale
 
 # Settings and service tweaks
-RUN systemctl disable tailscaled.service
+
 
 rm -rf \
 /tmp/* \
