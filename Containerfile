@@ -37,8 +37,7 @@ RUN rpm-ostree override remove \
   restic \
   stress-ng \
   tailscale \
-  tmux \
-  vim
+  tmux
 
 # Settings and service tweaks
 RUN systemctl disable tailscaled.service
