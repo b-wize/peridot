@@ -16,7 +16,7 @@ on:
 
 env:
   MY_IMAGE_NAME: "peridot"
-  ARG_BASE_IMAGE_NAME: "silverblue"
+  ARG_BASE_IMAGE_NAME: "bluefin"
   ARG_IMAGE_FLAVOR: "main"
   ARG_IMAGE_TAG: "latest"
   ARG_FEDORA_MAJOR_VERSION: "39"
