@@ -35,10 +35,6 @@ RUN rpm-ostree override remove \
   stress-ng \
   tailscale
 
-# Remove some extra flatpaks
-RUN flatpak remove \
-  org.gnome.Calendar \
-  org.gnome.maps
 
 # Settings and service tweaks
 
