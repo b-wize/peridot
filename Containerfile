@@ -12,7 +12,8 @@ COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
 RUN rpm-ostree install \
   gamescope \
   mangohud \
-  lm_sensors 
+  lm_sensors \
+  gamemode
   #google-chrome-stable
 
 # Remove some unwanted stuff
@@ -21,7 +22,6 @@ RUN rpm-ostree override remove \
   cockpit-bridge \
   epson-inkjet-printer-escpr \
   epson-inkjet-printer-escpr2 \
-  glow \
   gnome-shell-extension-blur-my-shell \
   gnome-shell-extension-dash-to-dock \
   gnome-shell-extension-logo-menu \
@@ -34,6 +34,11 @@ RUN rpm-ostree override remove \
   restic \
   stress-ng \
   tailscale
+
+# Remove some extra flatpaks
+RUN flatpak remove \
+  org.gnome.Calendar \
+  org.gnome.maps
 
 # Settings and service tweaks
 
