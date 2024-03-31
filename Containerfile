@@ -100,10 +100,10 @@ RUN rpm-ostree override replace \
     --experimental \
     --from repo=updates \
         cups-libs \
-        || true && \
-    rpm-ostree override remove \
-        glibc32 \
         || true
+    #rpm-ostree override remove \
+     #   glibc32 \
+      #  || true
 
 # Install Valve's patched Mesa & Pipewire
 # Install patched switcheroo control with proper discrete GPU support
