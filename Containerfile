@@ -105,6 +105,39 @@ RUN rpm-ostree override replace \
         glibc32 \
         || true
 
+# Install Valve's patched Mesa & Pipewire
+# Install patched switcheroo control with proper discrete GPU support
+RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/repo/fedora-"${FEDORA_MAJOR_VERSION}"/kylegospo-bazzite-multilib-fedora-"${FEDORA_MAJOR_VERSION}".repo?arch=x86_64 -O /etc/yum.repos.d/_copr_kylegospo-bazzite-multilib.repo &&\
+    rpm-ostree override remove \
+        mesa-va-drivers-freeworld && \
+    rpm-ostree override replace \
+    --experimental \
+    --from repo=copr:copr.fedorainfracloud.org:kylegospo:bazzite-multilib \
+        mesa-filesystem \
+        mesa-libxatracker \
+        mesa-libglapi \
+        mesa-dri-drivers \
+        mesa-libgbm \
+        mesa-libEGL \
+        mesa-vulkan-drivers \
+        mesa-libGL \
+        pipewire \
+        pipewire-alsa \
+        pipewire-gstreamer \
+        pipewire-jack-audio-connection-kit \
+        pipewire-jack-audio-connection-kit-libs \
+        pipewire-libs \
+        pipewire-pulseaudio \
+        pipewire-utils \
+        xorg-x11-server-Xwayland && \
+    rpm-ostree install \
+        mesa-va-drivers-freeworld \
+        mesa-vdpau-drivers-freeworld.x86_64 && \
+    rpm-ostree override replace \
+    --experimental \
+    --from repo=copr:copr.fedorainfracloud.org:sentry:switcheroo-control_discrete \
+        switcheroo-control
+
 # Steam + extras
 RUN rpm-ostree install \
         at-spi2-core.i686 \
