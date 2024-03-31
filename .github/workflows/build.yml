@@ -3,12 +3,12 @@ name: peridot-build
 on:
   pull_request:
     branches:
-      - main
+      - testing
   schedule:
     - cron: '0 6 * * 5'  # 6am UTC every Friday
   push:
     branches:
-      - main
+      - testing
     paths-ignore:
       - '**.md'
       - '**.txt'
