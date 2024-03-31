@@ -8,6 +8,8 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${IMAGE_TAG} AS peridot
 
 # COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
 
+RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/repo/fedora-"${FEDORA_MAJOR_VERSION}"/kylegospo-bazzite-multilib-fedora-"${FEDORA_MAJOR_VERSION}".repo?arch=x86_64 -O /etc/yum.repos.d/_copr_kylegospo-bazzite-multilib.repo
+
 # Add some additional packages
 RUN rpm-ostree install \
   gamescope \
@@ -100,15 +102,14 @@ RUN rpm-ostree override replace \
     --experimental \
     --from repo=updates \
         cups-libs \
+        || true && \
+    rpm-ostree override remove \
+        glibc32 \
         || true
-    #rpm-ostree override remove \
-     #   glibc32 \
-      #  || true
 
 # Install Valve's patched Mesa & Pipewire
 # Install patched switcheroo control with proper discrete GPU support
-RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/repo/fedora-"${FEDORA_MAJOR_VERSION}"/kylegospo-bazzite-multilib-fedora-"${FEDORA_MAJOR_VERSION}".repo?arch=x86_64 -O /etc/yum.repos.d/_copr_kylegospo-bazzite-multilib.repo &&\
-    rpm-ostree override remove \
+RUN rpm-ostree override remove \
         mesa-va-drivers-freeworld && \
     rpm-ostree override replace \
     --experimental \
