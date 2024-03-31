@@ -132,10 +132,18 @@ RUN rpm-ostree install \
         libatomic.i686 \
         pipewire-alsa.i686 \
         clinfo && \
+        sed -i '0,/enabled=1/s//enabled=0/' /etc/yum.repos.d/fedora-updates.repo && \
+    rpm-ostree install \
         mesa-vulkan-drivers.i686 \
         mesa-va-drivers-freeworld.i686 \
         mesa-vdpau-drivers-freeworld.i686 && \
-        steam \
+    sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
+    sed -i '0,/enabled=1/s//enabled=0/' /etc/yum.repos.d/rpmfusion-nonfree.repo && \
+    sed -i '0,/enabled=1/s//enabled=0/' /etc/yum.repos.d/rpmfusion-nonfree-updates.repo && \
+    sed -i '0,/enabled=1/s//enabled=0/' /etc/yum.repos.d/rpmfusion-nonfree-updates-testing.repo && \
+    rpm-ostree install \
+        steam && \
+    rpm-ostree install \
         wxGTK \
         libFAudio \
         wine-core.x86_64 \
@@ -149,8 +157,6 @@ RUN rpm-ostree install \
         vkBasalt.i686 \
         mangohud.x86_64 \
         mangohud.i686 \
-        vk_hdr_layer.x86_64 \
-        vk_hdr_layer.i686 \
         gperftools-libs.i686 \
         goverlay \
         gamescope-libs.i686 \
