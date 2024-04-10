@@ -11,7 +11,8 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${IMAGE_TAG} AS peridot
 
 # Add some additional packages
 RUN rpm-ostree install \
-    gamemode
+    gamemode \
+    gamescope
   
 
 # Remove some unwanted stuff
@@ -31,6 +32,7 @@ RUN rpm-ostree override remove \
   rclone \
   restic \
   stress-ng \
+  solaar \
   tailscale
 
 
