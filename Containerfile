@@ -18,7 +18,6 @@ RUN rpm-ostree install \
 # Remove some unwanted stuff
 RUN rpm-ostree override remove \
   evtest \
-  cockpit-bridge \
   epson-inkjet-printer-escpr \
   epson-inkjet-printer-escpr2 \
   gnome-shell-extension-blur-my-shell \
