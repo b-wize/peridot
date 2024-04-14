@@ -12,7 +12,8 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${IMAGE_TAG} AS peridot
 # Add some additional packages
 RUN rpm-ostree install \
     gamemode \
-    gamescope
+    gamescope \
+    mangohud
   
 
 # Remove some unwanted stuff
@@ -25,7 +26,6 @@ RUN rpm-ostree override remove \
   gnome-shell-extension-logo-menu \
   ifuse \
   input-leap \
-  input-remapper \
   libgda-sqlite \
   libgda \
   rclone \
