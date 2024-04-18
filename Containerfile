@@ -13,7 +13,8 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}:${IMAGE_TAG} AS peridot
 RUN rpm-ostree install \
     gamemode \
     gamescope \
-    mangohud
+    mangohud \
+    ulauncher
   
 
 # Remove some unwanted stuff
