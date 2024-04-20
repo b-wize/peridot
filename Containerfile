@@ -33,7 +33,8 @@ RUN rpm-ostree override remove \
   restic \
   stress-ng \
   solaar \
-  tailscale
+  tailscale \
+  v4l2loopback
 
 
 # Settings and service tweaks
