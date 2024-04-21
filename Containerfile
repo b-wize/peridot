@@ -35,6 +35,10 @@ RUN rpm-ostree override remove \
   solaar \
   tailscale
 
+# Remove additional kmods
+RUN rm -f \
+  /usr/lib/modules-load.d/v4l2loopback.conf \
+  /usr/lib/modules-load.d/displaylink.conf
 
 # Settings and service tweaks
 
