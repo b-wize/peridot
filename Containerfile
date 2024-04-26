@@ -21,7 +21,7 @@ RUN rpm-ostree override remove \
   evtest \
   epson-inkjet-printer-escpr \
   epson-inkjet-printer-escpr2 \
-  ghone-extensions-app \
+  gnome-extensions-app \
   gnome-shell-extension-blur-my-shell \
   gnome-shell-extension-dash-to-dock \
   gnome-shell-extension-logo-menu \
