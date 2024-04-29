@@ -1,4 +1,4 @@
-![peridot](https://github.com/b-wize/peridot/actions/workflows/build.yml/badge.svg)
+![peridot](https://github.com/b-wize/peridot/actions/workflows/build.yml/badge.svg?branch=main)
 
 
 ![image](https://github.com/b-wize/peridot/assets/29105401/8233800a-b9bb-4d98-882c-c707cd2febd2)
