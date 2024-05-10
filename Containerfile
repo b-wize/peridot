@@ -13,7 +13,12 @@ RUN rpm-ostree install \
     gamemode \
     gamescope \
     mangohud \
-    ulauncher
+    pam \
+    pam-u2f \
+    pamu2fcfg \
+    ulauncher \
+    yubikey-manager \
+    yubikey-manager-qt
   
 
 # Remove some unwanted stuff
