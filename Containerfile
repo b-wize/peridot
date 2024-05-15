@@ -23,7 +23,7 @@ RUN rpm-ostree install \
 
 # Remove some unwanted stuff
 RUN rpm-ostree override remove \
-  evtest \
+  evtest 
   #epson-inkjet-printer-escpr \
   #epson-inkjet-printer-escpr2 \
   #gnome-extensions-app \
