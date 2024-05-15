@@ -41,8 +41,7 @@ RUN rpm-ostree install \
   #tailscale
 
 
-RUN mkdir /var/lib/alternatives && \
-/tmp/build.sh && \
+RUN mkdir /tmp/build.sh && \
 ostree container commit
 
 
@@ -50,4 +49,5 @@ ostree container commit
 #rm -rf \
   #/tmp/* \
   #/var/* && \
+  #/var/lib/alternatives && \
   
