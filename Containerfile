@@ -24,21 +24,21 @@ RUN rpm-ostree install \
 # Remove some unwanted stuff
 RUN rpm-ostree override remove \
   evtest \
-  epson-inkjet-printer-escpr \
-  epson-inkjet-printer-escpr2 \
-  gnome-extensions-app \
-  gnome-shell-extension-blur-my-shell \
-  gnome-shell-extension-dash-to-dock \
-  gnome-shell-extension-logo-menu \
-  ifuse \
-  input-leap \
-  libgda-sqlite \
-  libgda \
-  rclone \
-  restic \
-  stress-ng \
-  solaar \
-  tailscale
+  #epson-inkjet-printer-escpr \
+  #epson-inkjet-printer-escpr2 \
+  #gnome-extensions-app \
+  #gnome-shell-extension-blur-my-shell \
+  #gnome-shell-extension-dash-to-dock \
+  #gnome-shell-extension-logo-menu \
+  #ifuse \
+  #input-leap \
+  #libgda-sqlite \
+  #libgda \
+  #rclone \
+  #restic \
+  #stress-ng \
+  #solaar \
+  #tailscale
 
 # Remove additional kmods
 RUN rm -f \
