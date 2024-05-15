@@ -41,7 +41,7 @@ RUN rpm-ostree override remove \
   #tailscale
 
 
-RUN mkdir -p /var/lib/alternatives && \
+RUN mkdir /var/lib/alternatives && \
 /tmp/build.sh && \
 ostree container commit
 
