@@ -44,10 +44,6 @@ rpm-ostree override replace \
     pipewire-libs \
     pipewire-pulseaudio \
     pipewire-utils \
-    bluez \
-    bluez-obexd \
-    bluez-cups \
-    bluez-libs \
     xorg-x11-server-Xwayland && \
 rpm-ostree install \
     mesa-va-drivers-freeworld \
