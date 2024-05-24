@@ -36,6 +36,7 @@ RUN rpm-ostree install \
     libXinerama.i686 \
     libXtst.i686 \
     libXScrnSaver.i686 \
+    mesa-filesystem.i686 \
     NetworkManager-libnm.i686 \
     nss.i686 \
     pulseaudio-libs.i686 \
