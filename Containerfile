@@ -7,6 +7,9 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}-${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 # COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
 
+RUN curl -Lo /etc/yum.repos.d/_copr_kylegospo-bazzite-multilib.repo https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/repo/fedora-40/kylegosp-bazzite-multilib-fedora-40.repo?arch=x86_64
+
+
 
 # Add some additional packages
 RUN rpm-ostree install \
