@@ -17,6 +17,7 @@ RUN rpm-ostree install \
     pam \
     pam-u2f \
     pamu2fcfg \
+    steam \
     ulauncher \
     yubikey-manager \
     yubikey-manager-qt
