@@ -20,8 +20,5 @@ RUN rpm-ostree install \
     steam-devices \
     ulauncher \
     yubikey-manager \
-    yubikey-manager-qt
-
-
-
+    yubikey-manager-qt && \
 ostree container commit
