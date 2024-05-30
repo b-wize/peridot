@@ -11,7 +11,9 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}-${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 # Add some additional packages
 RUN rpm-ostree install \
     gamemode \
-    gamescope \
+    gamescope.x86_64 \
+    gamescope-libs.i686 \
+    gamescope-shaders \
     input-remapper \
     mangohud \
     pam \
