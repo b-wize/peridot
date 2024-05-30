@@ -19,6 +19,7 @@ RUN rpm-ostree install \
     pamu2fcfg \
     steam-devices \
     ulauncher \
+    yaru-theme \
     yubikey-manager \
     yubikey-manager-qt && \
 ostree container commit
