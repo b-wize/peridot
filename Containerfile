@@ -6,12 +6,6 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 # COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
 
-RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-40/kylegospo-system76-scheduler-fedora-40.repo -O /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && \
-    rpm-ostree install \
-    --from repo=copr:copr.fedorainfracloud.org:system76-scheduler \
-    gnome-shell-extension-system76-scheduler \
-    system76-scheduler && \
-ostree container commit
 
 # Add some additional packages
 RUN rpm-ostree install \
