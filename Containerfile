@@ -9,6 +9,7 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 # Add some additional packages
 RUN rpm-ostree install \
+    breeze-cursor-theme \
     gamemode \
     gamescope \
     gnome-shell-extension-user-theme \
