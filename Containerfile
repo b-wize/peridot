@@ -14,6 +14,7 @@ RUN rpm-ostree install \
     gamescope \
     gnome-shell-extension-user-theme \
     input-remapper \
+    lm-sensors \
     mangohud \
     pam \
     pam-u2f \
