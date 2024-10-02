@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_NAME="silverblue"
+ARG BASE_IMAGE_NAME="kinoite"
 ARG IMAGE_FLAVOR="-main"
 ARG IMAGE_TAG="latest"
 
@@ -9,13 +9,7 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 # Add some additional packages
 RUN rpm-ostree install \
-    breeze-cursor-theme \
-    gamemode \
-    gamescope \
-    gnome-shell-extension-user-theme \
     input-remapper \
-    lm_sensors \
-    mangohud \
     pam \
     pam-u2f \
     pamu2fcfg \
