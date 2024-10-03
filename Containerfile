@@ -6,6 +6,10 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 # COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
 
+RUN rpm-ostree override remove \
+    firefox \
+    firefox-langpacks && \
+ostree container commit
 
 # Add some additional packages
 RUN rpm-ostree install \
