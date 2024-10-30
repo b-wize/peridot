@@ -6,7 +6,7 @@
 
 
 
-A customized OCI Fedora silverblue with some preferred tweaks. 
+A customized OCI Fedora kinoite (KDE) with some preferred tweaks. 
 
 Big thanks to everyone working on the [Universal Blue](https://github.com/ublue-os) and [Bazzite](https://github.com/ublue-os/bazzite) projects.
 
