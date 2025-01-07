@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_NAME="kinoite"
+ARG BASE_IMAGE_NAME="sericea"
 ARG IMAGE_FLAVOR="-main"
 ARG IMAGE_TAG="latest"
 
