@@ -8,7 +8,8 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 RUN rpm-ostree override remove \
     firefox \
-    firefox-langpacks && \
+    firefox-langpacks \
+    foot && \
 ostree container commit
 
 # Add some additional packages
@@ -17,6 +18,7 @@ RUN rpm-ostree install \
     pam \
     pam-u2f \
     pamu2fcfg \
+    ptyxis \
     steam-devices \
     yubikey-manager \
     yubikey-manager-qt && \
