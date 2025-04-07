@@ -8,7 +8,8 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 RUN rpm-ostree override remove \
     firefox \
-    firefox-langpacks && \
+    firefox-langpacks \
+    konsole && \
 ostree container commit
 
 # Add some additional packages
