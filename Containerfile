@@ -14,6 +14,7 @@ ostree container commit
 
 # Add some additional packages
 RUN rpm-ostree install \
+    hplip \
     input-remapper \
     pam \
     pam-u2f \
