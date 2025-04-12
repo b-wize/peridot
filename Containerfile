@@ -20,6 +20,7 @@ RUN rpm-ostree install \
     pam-u2f \
     pamu2fcfg \
     ptyxis \
+    ulauncher \
     yubikey-manager \
     yubikey-manager-qt && \
 ostree container commit
