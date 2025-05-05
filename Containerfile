@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_NAME="cosmic-atomic"
+ARG BASE_IMAGE_NAME="silverblue"
 ARG IMAGE_FLAVOR="-main"
 ARG IMAGE_TAG="latest"
 
