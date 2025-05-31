@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_NAME="kinoite"
+ARG BASE_IMAGE_NAME="silverblue"
 ARG IMAGE_FLAVOR="-main"
 ARG IMAGE_TAG="latest"
 
@@ -18,6 +18,7 @@ RUN rpm-ostree install \
     pam-u2f \
     pamu2fcfg \
     ptyxis \
+    ulauncher \
     yubikey-manager \
     yubikey-manager-qt && \
 ostree container commit
