@@ -14,13 +14,12 @@ RUN rpm-ostree override remove \
 # Add some additional packages
 RUN rpm-ostree install \
     hplip \
-    input-remapper \
     pam \
     pam-u2f \
     pamu2fcfg \
     ptyxis \
-    solaar \
     ulauncher \
+    yaru-theme \
     yubikey-manager \
     yubikey-manager-qt && \
 ostree container commit
