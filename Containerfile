@@ -13,6 +13,7 @@ RUN rpm-ostree override remove \
 
 # Add some additional packages
 RUN rpm-ostree install \
+    breeze-cursor-theme \
     gnome-tweaks \
     hplip \
     pam \
