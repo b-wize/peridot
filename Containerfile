@@ -8,13 +8,14 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 RUN rpm-ostree override remove \
     firefox \
-    firefox-langpacks && \
+    firefox-langpacks \
+    gnome-software \
+    malcontent-control && \
  ostree container commit
 
 # Add some additional packages
 RUN rpm-ostree install \
     breeze-cursor-theme \
-    gnome-tweaks \
     hplip \
     pam \
     pam-u2f \
@@ -26,3 +27,15 @@ RUN rpm-ostree install \
     yubikey-manager \
     yubikey-manager-qt && \
 ostree container commit
+
+# install flatpaks
+RUN flatpak install flathub \
+    org.mozilla.firefox \
+    io.github.dvlv.boxbuddyrs \
+    com.mattjakeman.ExtensionManager \
+    io.github.flattool.Warehouse \ 
+    com.discordapp.Discord \
+    com.github.IsmaelMartinez.teams_for_linux && \
+ostree container commit
+    
+    
