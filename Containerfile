@@ -40,5 +40,6 @@ RUN flatpak install flathub -y \
     io.github.flattool.Warehouse \ 
     com.discordapp.Discord \
     com.github.IsmaelMartinez.teams_for_linux && \
+ostree conainer commit
 
     
