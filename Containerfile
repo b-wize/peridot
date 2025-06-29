@@ -33,7 +33,7 @@ RUN flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo
     systemctl disable flatpak-add-fedora-repos.service && \
 ostree container commit
 
-RUN flatpak install flathub \
+RUN flatpak install flathub -y \
     org.mozilla.firefox \
     io.github.dvlv.boxbuddyrs \
     com.mattjakeman.ExtensionManager \
