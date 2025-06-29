@@ -29,7 +29,7 @@ RUN rpm-ostree install \
 ostree container commit
 
 # install flatpaks
-RUN flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo \
+RUN flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     systemctl disable flatpak-add-fedora-repos.service && \
 ostree container commit
 
