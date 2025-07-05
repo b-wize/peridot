@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_NAME="silverblue"
+ARG BASE_IMAGE_NAME="sway-atomic"
 ARG IMAGE_FLAVOR="-main"
 ARG IMAGE_TAG="latest"
 
@@ -8,9 +8,9 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 RUN rpm-ostree override remove \
     firefox \
-    firefox-langpacks \
-    gnome-software \
-    malcontent-control && \
+    firefox-langpacks && \
+   # gnome-software \
+   # malcontent-control && \
  ostree container commit
 
 # Add some additional packages
