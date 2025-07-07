@@ -8,7 +8,9 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 RUN rpm-ostree override remove \
     firefox \
-    firefox-langpacks && \
+    firefox-langpacks \
+    foot \
+    waybar && \
    # gnome-software \
    # malcontent-control && \
  ostree container commit
@@ -17,11 +19,11 @@ RUN rpm-ostree override remove \
 RUN rpm-ostree install \
     breeze-cursor-theme \
     hplip \
+    nwg-panel \
     pam \
     pam-u2f \
     pamu2fcfg \
     ptyxis \
-    ulauncher \
     yubikey-manager \
     yubikey-manager-qt && \
 ostree container commit
