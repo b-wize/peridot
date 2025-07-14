@@ -22,6 +22,26 @@ RUN rpm-ostree install \
     yubikey-manager-qt && \
 ostree container commit
 
+# remove kde flatpaks
+RUN flatpak remove \
+    org.kde.elisa \
+    org.kde.kdiamond \
+    org.kde.kbreakout \
+    org.kde.kate \
+    org.kde.kfourinline \
+    org.kde.kwrite \
+    org.kde.ksudoku \
+    org.kde.konversation \
+    org.kde.kpat \
+    org.kde.krdc \
+    org.kde.kolourpaint \
+    org.kde.kmahjongg \
+    org.kde.kmines \
+    org.kde.kshisen \
+    org.kde.kreversi \
+    org.kde.kcharselect &&\
+ostree container commit
+
 # install flatpaks
 RUN flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && \
     systemctl disable flatpak-add-fedora-repos.service && \
