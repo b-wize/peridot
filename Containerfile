@@ -14,7 +14,7 @@ RUN rpm-ostree override remove \
 
 # Add some additional packages
 RUN rpm-ostree install \
-    breeze-cursor-theme
+    breeze-cursor-theme \
     hplip \
     pam \
     pam-u2f \
