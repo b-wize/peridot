@@ -36,6 +36,12 @@ ostree container commit
 
 RUN flatpak install flathub -y \
     org.mozilla.firefox \
-    io.github.flattool.Warehouse && \
+    io.github.flattool.Warehouse \
+    com.usebottles.bottles \
+    com.github.tchx84.Flatseal \
+    org.remmina.Remmina \
+    org.videolan.VLC \
+    com.vscodium.codium \
+    com.discordapp.Discord && \
 ostree container commit
     
