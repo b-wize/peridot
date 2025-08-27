@@ -1,4 +1,4 @@
-ARG BASE_IMAGE_NAME="silverblue"
+ARG BASE_IMAGE_NAME="kinoite"
 ARG IMAGE_FLAVOR="-main"
 ARG IMAGE_TAG="latest"
 
