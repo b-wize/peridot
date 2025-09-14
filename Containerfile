@@ -21,8 +21,7 @@ RUN rpm-ostree install \
     pamu2fcfg \
     ulauncher \
     yaru-theme
-    yubikey-manager \
-    yubikey-manager-qt && \
+    yubikey-manager && \
 ostree container commit
 
 # remove kde flatpaks
