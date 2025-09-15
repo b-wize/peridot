@@ -19,6 +19,7 @@ RUN rpm-ostree install \
     pam \
     pam-u2f \
     pamu2fcfg \
+    papirus-icon-theme-dark \
     ulauncher \
     yaru-theme \
     yubikey-manager \
