@@ -14,14 +14,11 @@ RUN rpm-ostree override remove \
 
 # Add some additional packages
 RUN rpm-ostree install \
-    breeze-cursor-theme \
     hplip \
     pam \
     pam-u2f \
     pamu2fcfg \
-    papirus-icon-theme-dark \
     ulauncher \
-    yaru-theme \
     yubikey-manager \
     yubikey-manager-qt && \
 ostree container commit
@@ -36,7 +33,7 @@ ostree container commit
 
 RUN flatpak install flathub -y \
     org.mozilla.firefox \
-    io.github.flattool.Warehouse \
+    io.github.kolunmi.Bazaar \
     com.github.tchx84.Flatseal && \
 ostree container commit
     
