@@ -4,7 +4,8 @@ ARG IMAGE_TAG="latest"
 
 FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
-dnf copr enable atim/starship
+RUN dnf copr enable atim/starship && \
+ostree container commit
 
 RUN rpm-ostree override remove \
     firefox \
