@@ -7,8 +7,7 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 RUN dnf copr enable atim/starship && \
 ostree container commit
 
-RUN dnf install starship && \
-ostree container commit
+RUN dnf install starship
 
 RUN rpm-ostree override remove \
     firefox \
