@@ -7,6 +7,9 @@ FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 RUN dnf copr enable atim/starship && \
 ostree container commit
 
+RUN dnf install starship && \
+ostree container commit
+
 RUN rpm-ostree override remove \
     firefox \
     firefox-langpacks \
@@ -19,7 +22,6 @@ RUN rpm-ostree install \
     pam \
     pam-u2f \
     pamu2fcfg \
-    starship \
     ulauncher \
     yubikey-manager \
     yubikey-manager-qt && \
