@@ -4,7 +4,7 @@ ARG IMAGE_TAG="latest"
 
 FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
-# COPY system_files/yum.repos.d/google-chrome.repo /etc/yum.repos.d/
+dnf copr enable atim/starship
 
 RUN rpm-ostree override remove \
     firefox \
@@ -18,6 +18,7 @@ RUN rpm-ostree install \
     pam \
     pam-u2f \
     pamu2fcfg \
+    starship \
     ulauncher \
     yubikey-manager \
     yubikey-manager-qt && \
