@@ -20,6 +20,7 @@ RUN rpm-ostree override remove \
     kwrite \
     krfb \
     krfb-libs \
+    kcharselect \
     plasma-discover \
     plasma-discover-libs \
     plasma-discover-flatpak \
