@@ -11,6 +11,7 @@ RUN rpm-ostree override remove \
     firefox \
     firefox-langpacks \
     kde-connect \
+    kde-connect-libs \
     kwrite \
     plasma-discover \
     plasma-discover-libs \
