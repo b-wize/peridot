@@ -18,6 +18,8 @@ RUN rpm-ostree override remove \
     kate-plugins \
     kate-krunner-plugin \
     kwrite \
+    krfb \
+    krfb-libs \
     plasma-discover \
     plasma-discover-libs \
     plasma-discover-flatpak \
