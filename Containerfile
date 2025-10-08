@@ -13,6 +13,10 @@ RUN rpm-ostree override remove \
     kde-connect \
     kdeconnectd \
     kde-connect-libs \
+    kate \
+    kate-libs \
+    kate-plugins \
+    kate-krunner-plugins \
     kwrite \
     plasma-discover \
     plasma-discover-libs \
