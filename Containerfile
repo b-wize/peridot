@@ -11,7 +11,8 @@ RUN rpm-ostree override remove \
     firefox \
     firefox-langpacks \
     kwrite \
-    plasma-discover && \
+    plasma-discover \
+    plasma-discover-notifier && \
 ostree container commit
 
 # Add some additional packages
