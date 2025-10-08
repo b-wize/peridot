@@ -5,13 +5,12 @@ ARG IMAGE_TAG="latest"
 FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
 #install starship
-curl -sS https://starship.rs/install.sh | sh
+#curl -sS https://starship.rs/install.sh | sh
 
 RUN rpm-ostree override remove \
     firefox \
-    firefox-langpacks \
-    gnome-software && \
-    ostree container commit
+    firefox-langpacks && \
+ostree container commit
 
 # Add some additional packages
 RUN rpm-ostree install \
