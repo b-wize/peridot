@@ -25,8 +25,7 @@ RUN rpm-ostree override remove \
     plasma-discover-libs \
     plasma-discover-flatpak \
     plasma-discover-notifier \ 
-    plasma-discover-kns \
-    plasma-emojier && \
+    plasma-discover-kns && \
 ostree container commit
 
 # Add some additional packages
