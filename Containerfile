@@ -16,7 +16,7 @@ RUN rpm-ostree override remove \
     kate \
     kate-libs \
     kate-plugins \
-    kate-krunner-plugins \
+    kate-krunner-plugin \
     kwrite \
     plasma-discover \
     plasma-discover-libs \
