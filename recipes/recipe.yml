@@ -1,0 +1,69 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: peridot
+# description will be included in the image's metadata
+description: Fedora Atomic with a few tweaks
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+    install:
+      packages:
+        - micro
+        - starship
+    remove:
+      packages:
+        # example: removing firefox (in favor of the flatpak)
+        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - kde-connect 
+        - kdeconnectd 
+        - kde-connect-libs 
+        - kate 
+        - kate-libs 
+        - kate-plugins 
+        - kate-krunner-plugin 
+        - kwrite 
+        - krfb 
+        - krfb-libs 
+        - kcharselect 
+        - plasma-discover 
+        - plasma-discover-libs 
+        - plasma-discover-flatpak 
+        - plasma-discover-notifier  
+        - plasma-discover-kns
+
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks we want all users to have and not remove
+          org.mozilla.firefox
+         - io.github.kolunmi.Bazaar
+         - com.github.tchx84.Flatseal
+         - io.github.dvlv.boxbuddyrs
+         - com.usebottles.bottles
+         - org.kde.kalk
+         - com.discordapp.Discord
+         - com.vscodium.codium
+         - org.remmina.Remmina
+         - org.videolan.VLC
+      - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
