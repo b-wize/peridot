@@ -2,7 +2,7 @@ ARG BASE_IMAGE_NAME="kinoite"
 ARG IMAGE_FLAVOR="-main"
 ARG IMAGE_TAG="latest"
 
-COPY /flatpaks /flatpaks
+#COPY /flatpaks /flatpaks
 
 FROM ghcr.io/ublue-os/${BASE_IMAGE_NAME}${IMAGE_FLAVOR}:${IMAGE_TAG} AS peridot
 
