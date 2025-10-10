@@ -25,6 +25,14 @@ modules:
       packages:
         - micro
         - starship
+        - hplip 
+        - pam 
+        - pam-u2f 
+        - pamu2fcfg 
+        - ulauncher 
+        - yubikey-manager 
+        - yubikey-manager-qt
+
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
