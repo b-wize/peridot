@@ -8,7 +8,7 @@
 
 A customized OCI Fedora 42 with some preferred tweaks. 
 
-Big thanks to everyone working on the [Universal Blue](https://github.com/ublue-os) and [Bazzite](https://github.com/ublue-os/bazzite) projects.
+Big thanks to everyone working on the [Universal Blue](https://github.com/ublue-os), [Bazzite](https://github.com/ublue-os/bazzite), and [Blue-Build](https://github.com/blue-build/website) projects.
 
 Rebasing
 To rebase an existing Silverblue/Kinoite installation to the latest build:
@@ -29,4 +29,4 @@ Reboot again to complete the installation
 #
     systemctl reboot
 
-Again, this project would not be possible without all the hard work contributed to the Universal Blue (Ublue) and Bazzite projects.
+Again, this project would not be possible without all the hard work contributed to the Universal Blue (Ublue), Bazzite, and Blue-Build projects.
