@@ -54,7 +54,7 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          org.mozilla.firefox
+         - org.mozilla.firefox
          - io.github.kolunmi.Bazaar
          - com.github.tchx84.Flatseal
          - io.github.dvlv.boxbuddyrs
