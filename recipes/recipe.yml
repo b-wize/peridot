@@ -21,10 +21,12 @@ modules:
     repos:
       copr:
         - atim/starship
+        - matinlotfali/KDE-Rounded-Corners 
     install:
       packages:
         - micro
         - starship
+        - kwin-effect-roundcorners
         - hplip 
         - pam 
         - pam-u2f 
