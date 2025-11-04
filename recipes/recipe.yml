@@ -31,7 +31,6 @@ modules:
         - pam 
         - pam-u2f 
         - pamu2fcfg 
-        - solaar
         - ulauncher 
         - yubikey-manager 
         - yubikey-manager-qt
