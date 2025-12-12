@@ -6,7 +6,7 @@ name: peridot
 description: Fedora Atomic with a few tweaks
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/blue-build/base-images/fedora-cosmic
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -26,12 +26,12 @@ modules:
       packages:
         - micro
         - starship
-        - kwin-effect-roundcorners
+        #- kwin-effect-roundcorners
         - hplip 
         - pam 
         - pam-u2f 
         - pamu2fcfg 
-        - ulauncher 
+        #- ulauncher 
         - yubikey-manager 
         - yubikey-manager-qt
 
@@ -41,22 +41,22 @@ modules:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-        - kde-connect 
-        - kdeconnectd 
-        - kde-connect-libs 
-        - kate 
-        - kate-libs 
-        - kate-plugins 
-        - kate-krunner-plugin 
-        - kwrite 
-        - krfb 
-        - krfb-libs 
-        - kcharselect 
-        - plasma-discover 
-        - plasma-discover-libs 
-        - plasma-discover-flatpak 
-        - plasma-discover-notifier  
-        - plasma-discover-kns
+        #- kde-connect 
+        #- kdeconnectd 
+        #- kde-connect-libs 
+        #- kate 
+        #- kate-libs 
+        #- kate-plugins 
+        #- kate-krunner-plugin 
+        #- kwrite 
+        #- krfb 
+        #- krfb-libs 
+        #- kcharselect 
+        #- plasma-discover 
+        #- plasma-discover-libs 
+        #- plasma-discover-flatpak 
+        #- plasma-discover-notifier  
+        #- plasma-discover-kns
 
   - type: default-flatpaks
     configurations:
