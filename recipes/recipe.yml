@@ -40,39 +40,7 @@ modules:
         - yubikey-manager 
         - yubikey-manager-qt
 
-    - type: custom
-      commands:
-        - |
-          echo "Installing upstream Mozilla Firefox…"
-
-          # Download latest Firefox tarball
-          curl -L "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" \
-          -o /tmp/firefox.tar.bz2
-
-          # Extract into /usr/lib
-          mkdir -p /usr/lib/firefox
-          tar -xjf /tmp/firefox.tar.bz2 -C /usr/lib/firefox --strip-components=1
-
-          # Symlink into PATH
-          ln -sf /usr/lib/firefox/firefox /usr/bin/firefox
-
-          # Install desktop entry
-          cat >/usr/share/applications/firefox.desktop << 'EOF'
-          [Desktop Entry]
-          Name=Firefox (Upstream)
-          Comment=Browse the Web
-          Exec=/usr/bin/firefox %u
-          Terminal=false
-          Type=Application
-          Icon=/usr/lib/firefox/browser/chrome/icons/default/default128.png
-          Categories=Network;WebBrowser;
-          MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
-          EOF
-  
-          # Cleanup
-          rm -f /tmp/firefox.tar.bz2
-
-
+      
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
