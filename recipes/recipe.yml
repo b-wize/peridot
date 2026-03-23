@@ -40,7 +40,7 @@ modules:
         - yubikey-manager 
         - yubikey-manager-qt
 
-    - type: script
+    - type: custom
       snippets:
         - |
           echo "Installing upstream Mozilla Firefox…"
