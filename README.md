@@ -6,7 +6,7 @@
 
 
 
-A customized OCI Fedora 42 with some preferred tweaks. 
+A customized OCI Fedora 43 with some preferred tweaks. 
 
 Big thanks to everyone working on the [Universal Blue](https://github.com/ublue-os), [Bazzite](https://github.com/ublue-os/bazzite), and [Blue-Build](https://github.com/blue-build/website) projects.
 
