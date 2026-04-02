@@ -58,6 +58,7 @@ modules:
         - krfb 
         - krfb-libs 
         - kcharselect 
+        - konsole
         - plasma-discover 
         - plasma-discover-libs 
         - plasma-discover-flatpak 
