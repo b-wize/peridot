@@ -55,6 +55,7 @@ modules:
         - kate-libs 
         - kate-plugins 
         - kate-krunner-plugin 
+        - kwallet
         - kwrite 
         - krfb 
         - krfb-libs 
