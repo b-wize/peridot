@@ -61,6 +61,7 @@ modules:
         - krfb-libs 
         - kcharselect 
         - konsole
+        - pipewire-config-raop
         - plasma-discover 
         - plasma-discover-libs 
         - plasma-discover-flatpak 
